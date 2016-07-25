@@ -1,0 +1,13 @@
+
+
+<% @trails.each do |trail| %>
+<ul>
+<h1><%= link_to trail.name, trail_name_path(trail.id) %></h1>
+<li> <%= trail.location %></li>
+<li> <%= trail.level %></li>
+<li><%= trail.distance %></li>
+</ul>
+<% end %>
+
+
+<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>

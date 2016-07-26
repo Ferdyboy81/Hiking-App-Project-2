@@ -1,7 +1,7 @@
-<%= form_for(@profile) do |f| %>
+<%= form_for @profile, html: { multipart: true } do |f| %>
   <% if @profile.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+      <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this pet from being saved:</h2>
 
       <ul>
       <% @profile.errors.full_messages.each do |message| %>
@@ -23,7 +23,7 @@
     <%= f.label :image %><br>
        <%= f.file_field :image %>
        <% if f.object.image? %>
-         <%= image_tag f.object.image.thumb.url %>
+         <%= image_tag f.object.image.url %>
          <%= f.label :remove_image %>
          <%= f.check_box :remove_image %>
          <% end %>

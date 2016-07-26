@@ -2,18 +2,18 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @profile.name %>
+  <%= @profiles.name %>
 </p>
 
 <p>
   <strong>Description:</strong>
-  <%= @profile.description %>
+  <%= @profiles.description %>
 </p>
 
 <p>
   <strong>Image:</strong>
-  <%= image_tag @profile.image.thumb.url %>
+  <%= image_tag @profiles.image.url %>
 </p>
 
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Edit', edit_path(@profiles) %>
 <%= link_to 'Back', profiles_path %>

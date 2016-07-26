@@ -17,10 +17,10 @@
       <tr>
         <td><%= profile.name %></td>
         <td><%= profile.description %></td>
-        <td><%= profile.image %></td>
-        <td><%= link_to 'Show', profile %></td>
-        <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
-        <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= image_tag profile.image.url %></td>
+        <td><%= link_to 'Show', show_path(profile) %></td>
+        <td><%= link_to 'Edit', edit_path(profile) %></td>
+        <td><%= link_to 'Destroy', destroy_path(profile), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

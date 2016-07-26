@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   has_many :reviews
   has_many :photos
   has_many :trails, through: :reviews
-
+  belongs_to :profile
 
 
 end

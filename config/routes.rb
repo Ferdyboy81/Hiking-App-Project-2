@@ -3,13 +3,20 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+
   resources :trails do
     resources :reviews
   end
 
   get 'welcome/:id' => 'welcome#show', as: "trail_name"
-  
 
+ get 'profiles/' => 'profiles#index'
+ get 'profiles/new' => 'profiles#new'
+ post '/profiles' => 'profiles#create'
+ get '/profiles/:id/edit' => 'profiles#edit'
+ get '/profiles/:id' => 'profiles#show'
+ patch '/profiles/:id' => 'profiles#update'
+ delete '/profiles/:id' => 'profiles#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

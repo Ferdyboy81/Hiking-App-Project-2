@@ -1,13 +1,21 @@
 
+
+<div class="container">
 <% @trails.each do |trail| %>
 
-<h1><%= link_to trail.name, trail_name_path(trail.id) %></h1>
-<ul>
-<%= trail.location %>
-<%= trail.level %>
-<%= trail.distance %>
-</ul>
-<% end %>
+  <div class="col-md-4">
+    <h1><%= link_to trail.name, trail_name_path(trail.id) %></h1>
+    <ul>
+    <%= trail.location %>
+    <%= trail.level %>
+    <%= trail.distance %>
+    </ul>
+    <br>
+    </div>
 
+
+
+<% end %>
+</div>
 
 <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>

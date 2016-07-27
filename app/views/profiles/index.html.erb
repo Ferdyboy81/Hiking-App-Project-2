@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Profiles</h1>
+<h1>Photos</h1>
 
 <table>
   <thead>
@@ -19,7 +19,6 @@
         <td><%= profile.description %></td>
         <td><%= image_tag profile.image_url(:thumb) %></td>
         <td><%= link_to 'Show', show_path(profile) %></td>
-        <td><%= link_to 'Edit', edit_path(profile) %></td>
         <td><%= link_to 'Destroy', destroy_path(profile), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

@@ -48,6 +48,14 @@ input {
   text-align: center;
 }
 
+#login {
+  margin-top: 120px;
+}
+
+#signup {
+  margin-top: 70px;
+}
+
 .btn.btn-default {
   height: 40px;
   width: 100px;
@@ -55,4 +63,8 @@ input {
 
 .form-control {
   width: 300px;
+}
+
+a {
+    color: inherit;
 }

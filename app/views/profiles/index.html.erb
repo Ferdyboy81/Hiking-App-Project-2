@@ -1,3 +1,19 @@
+<ul class="nav nav-tabs">
+  <li role="presentation"><a href="/welcome">Home</a></li>
+  <li role="presentation" class="active"><a href="/profiles">Profile</a></li>
+
+
+<% if user_signed_in? %>
+      Signed in as <%= current_user.email %>.
+    <li role="presentation"> <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+  <% else %>
+    <li role="presentation"> <%= link_to 'Register', new_user_registration_path %><li>  <li><%= link_to 'Sign in', new_user_session_path %></li>
+  <% end %>
+
+
+</ul>
+
+
 <p id="notice"><%= notice %></p>
 
 <h1>Photos</h1>

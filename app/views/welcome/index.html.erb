@@ -1,12 +1,35 @@
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="/welcome">Home</a></li>
+  <li role="presentation"><a href="/profiles">Profile</a></li>
+
+
+<% if user_signed_in? %>
+      Signed in as <%= current_user.email %>.
+    <li role="presentation"> <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+  <% else %>
+    <li role="presentation"> <%= link_to 'Register', new_user_registration_path %><li>  <li><%= link_to 'Sign in', new_user_session_path %></li>
+  <% end %>
+
+
+</ul>
+
+
 
 <div class="embed-responsive embed-responsive-16by9">
 <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/130699654?autoplay=1&loop=1&background=1&color=ffffff&portrait=0" width="1000" height="567" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
 
-<div id="hikes">
-<body data-spy="scroll" data-target="navbar">
-  <div id="navbar-example">
-    <ul class="nav nav-tabs" role="tablist">
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          Hikes
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
 
 <% @trails.each do |trail| %>
 
@@ -16,18 +39,14 @@
     <%= link_to trail.name, trail_name_path(trail.id) %>
   </dt>
   </dl>
-    </div>
-  </ul>
 </div>
-</body>
-</div>
-
-
-
 <% end %>
 </div>
+   </div>
+ </div>
 
 
+
+<i class="glyphicon glyphicon-copyright-mark"> </i> Kayli Nishime<br>
+Filmed by Tim Eddy: The Land of the Long White Cloud - New Zealand<br>
 <%= link_to "Sign out", destroy_user_session_path, :method => :delete %><br>
-
-Filmed by Tim Eddy: The Land of the Long White Cloud - New Zealand

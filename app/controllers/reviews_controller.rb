@@ -7,6 +7,7 @@ before_action :review_owner, only: [:destroy, :edit, :update]
 
 def index
   @reviews = Review.all
+  @trails = Trail.all
 end
 
 

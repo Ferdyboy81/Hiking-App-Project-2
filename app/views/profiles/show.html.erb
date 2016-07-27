@@ -1,6 +1,6 @@
 <ul class="nav nav-tabs">
   <li role="presentation" class="active"><a href="/welcome">Home</a></li>
-  <li role="presentation"><a href="/profiles" class="active">Profile</a></li>
+  <li role="presentation"><a href="/profiles" class="active">Photos</a></li>
 
 
 <% if user_signed_in? %>
@@ -13,23 +13,26 @@
 
 </ul>
 
-<div id="show">
+
 <p id="notice"><%= notice %></p>
 
+
+  <strong>Image:</strong>
+  <%= image_tag @profiles.image_url(:thumb) %>
+</div>
+
+<br>
 <p>
   <strong>Name:</strong>
-  <%= @profiles.name %>
+  <%= @profiles.name %></br>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Description:</strong><br>
   <%= @profiles.description %>
 </p>
 
-<p>
-  <strong>Image:</strong>
-  <%= image_tag @profiles.image_url(:thumb) %>
-</p>
+
 
 
 <%= link_to 'Back', profiles_path %>

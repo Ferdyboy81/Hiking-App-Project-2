@@ -1,6 +1,6 @@
 <ul class="nav nav-tabs">
   <li role="presentation"><a href="/welcome">Home</a></li>
-  <li role="presentation" class="active"><a href="/profiles">Profile</a></li>
+  <li role="presentation" class="active"><a href="/profiles">Photos</a></li>
 
 
 <% if user_signed_in? %>
@@ -18,27 +18,12 @@
 
 <h1>Photos</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
+
     <% @profiles.each do |profile| %>
-      <tr>
-        <td><%= profile.name %></td>
-        <td><%= profile.description %></td>
-        <td><%= image_tag profile.image_url(:thumb) %></td>
-        <td><%= link_to 'Show', show_path(profile) %></td>
-        <td><%= link_to 'Destroy', destroy_path(profile), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <div id="instagramstuffs">
+        <%= image_tag profile.image_url(:thumb) %><br>
+        <%= link_to 'Full Size', show_path(profile) %> |
+        <%= link_to 'Delete', destroy_path(profile), method: :delete, data: { confirm: 'Are you sure?' } %><br>
+  </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>

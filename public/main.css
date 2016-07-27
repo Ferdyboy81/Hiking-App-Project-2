@@ -39,6 +39,8 @@ input {
 
 #show {
   background-color: white;
+  float: right;
+  display: block;
 }
 
 #newprofile {
@@ -67,4 +69,14 @@ input {
 
 a {
     color: inherit;
+}
+
+#instagramstuffs {
+  display: inline;
+  float: left;
+  padding: 1px;
+  width: 320px;
+  padding: 20px;
+  margin-left: 60px;
+  margin-right: auto;
 }

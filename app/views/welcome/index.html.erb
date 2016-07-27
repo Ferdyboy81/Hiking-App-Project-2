@@ -1,9 +1,13 @@
+
 <div class="embed-responsive embed-responsive-16by9">
 <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/130699654?autoplay=1&loop=1&background=1&color=ffffff&portrait=0" width="1000" height="567" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
 
+<div id="hikes">
+<body data-spy="scroll" data-target="navbar">
+  <div id="navbar-example">
+    <ul class="nav nav-tabs" role="tablist">
 
-<div class="container">
 <% @trails.each do |trail| %>
 
   <div class="col-md-6">
@@ -13,6 +17,10 @@
   </dt>
   </dl>
     </div>
+  </ul>
+</div>
+</body>
+</div>
 
 
 

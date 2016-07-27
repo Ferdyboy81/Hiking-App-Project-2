@@ -1,8 +1,11 @@
+<div id="trails">
 <h1><%= @trails.name %></h1>
 <p><%= @trails.location %></p>
 <p><%= @trails.level %></p>
 <p><%= @trails.distance %></p>
+<p><%= link_to "google", @trails.directions %></p>
 
+</div>
 
 <%= render 'reviews/form' %>
 <%= render 'reviews/reviews' %>

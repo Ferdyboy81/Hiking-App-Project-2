@@ -2,8 +2,15 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  background-color: black;
+  color: black;
 }
 
+.container {
+  background-color: white;
+  padding: 40px;
+  margin: 60px;
+}
 button, input, select, textarea {
     font-family: inherit;
     font-size: inherit;

@@ -9,16 +9,22 @@
   <link rel="stylesheet" type="text/css" href="/main.css">
 </head>
 <body>
+  <ul class="nav nav-tabs">
+    <li role="presentation" class="active"><a href="#">Home</a></li>
+    <li role="presentation"><a href="#">Profile</a></li>
+    <li role="presentation"><a href="#">Messages</a></li>
+
 
   <% if user_signed_in? %>
         Signed in as <%= current_user.email %>.
-        <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+      <li role="presentation"> <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
     <% else %>
-        <%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %>
+      <li role="presentation"> <%= link_to 'Register', new_user_registration_path %><li> or <li><%= link_to 'Sign in', new_user_session_path %></li>
     <% end %>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+
+  </ul>
+
 
 <%= yield %>
 

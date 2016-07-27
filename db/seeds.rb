@@ -24,6 +24,9 @@ trails = Trail.create([
   { name: "Heritage Trailand Botany Loop Trail", location: "Placerita Canyon State Park", level: "easy", distance: "4.8 miles"},
   { name: "O'Melveny Bee Canyon Trail", location: "O Melveny Park, Granada Hills, CA", level: "moderate", distance: "4.0 miles"},
   { name: "Mission Point", location: "O Melveny Park, Los Angeles, CA", level: "moderate", distance: "4.4 miles"},
+  { name: "Bunker Hill Steps", location: "Los Angeles, CA", level: "easy", distance: "0.1 miles"},
+  { name: "Lake Balboa Park", location: "Lake Balboa Park, Los Angeles, CA", level: "moderate", distance: "1.4 miles"},
+  { name: "Inspiration Point Trail", location: "Will Rogers Historic State Park, Los Angeles, CA", level: "easy", distance: "2.4 miles"},
 ])
 
 user = User.create({

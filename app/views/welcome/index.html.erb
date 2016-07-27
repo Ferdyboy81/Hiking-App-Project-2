@@ -1,19 +1,17 @@
-
-<iframe src="https://player.vimeo.com/video/130699654?autoplay=1&loop=1&background=1&color=ffffff&portrait=0" width="1000" height="570" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://player.vimeo.com/video/130699654?autoplay=1&loop=1&background=1&color=ffffff&portrait=0" width="1000" height="567" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
 
 
 <div class="container">
 <% @trails.each do |trail| %>
 
-  <div class="col-md-4">
-    <h4><%= link_to trail.name, trail_name_path(trail.id) %></h4>
-    <ul><small>
-    <%= trail.location %>
-    <%= trail.level %>
-    <%= trail.distance %>
-  </small>
-    </ul>
-    <br>
+  <div class="col-md-6">
+    <dl class="dl-horizontal"><%= trail.location %>
+      <dt>
+    <%= link_to trail.name, trail_name_path(trail.id) %>
+  </dt>
+  </dl>
     </div>
 
 
@@ -21,4 +19,7 @@
 <% end %>
 </div>
 
-<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+
+<%= link_to "Sign out", destroy_user_session_path, :method => :delete %><br>
+
+Filmed by Tim Eddy: The Land of the Long White Cloud - New Zealand

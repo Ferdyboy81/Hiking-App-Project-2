@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-
+  resources :users
   resources :trails do
     resources :reviews
   end
@@ -14,7 +14,7 @@ Rails.application.routes.draw do
  get 'profiles/' => 'profiles#index'
  get 'profiles/new' => 'profiles#new'
  post '/profiles' => 'profiles#create'
-  get '/profiles/:id' => 'profiles#show', as: 'show'
+ get '/profiles/:id' => 'profiles#show', as: 'show'
  get '/profiles/:id/edit' => 'profiles#edit', as: 'edit'
  patch '/profiles/:id' => 'profiles#update', as: 'update'
  delete '/profiles/:id', to: 'profiles#destroy', as: 'destroy'

@@ -1,5 +1,9 @@
 class ProfilesController < ApplicationController
-  before_action :set_profile, only: [:show, :edit, :update, :destroy]
+
+before_action :authenticate_user!
+before_action :get_profile, only: [:edit, :update]
+before_action :set_profile, only: [ :edit, :update, :destroy]
+
 
   # GET /profiles
   # GET /profiles.json
@@ -11,7 +15,7 @@ class ProfilesController < ApplicationController
   # GET /profiles/1
   # GET /profiles/1.json
   def show
-  @profiles = Profile.find(params[:id])
+
   end
 
   # GET /profiles/new
@@ -28,10 +32,14 @@ class ProfilesController < ApplicationController
   # POST /profiles.json
   def create
     @profile = Profile.new(profile_params)
+    @profile.user = current_user
+
+
+
 
     respond_to do |format|
       if @profile.save
-        format.html { redirect_to profiles_path, notice: 'Profile was successfully created.' }
+        format.html { redirect_to profiles_path, notice: 'Photo was successfully uploaded.' }
         format.json { render :show, status: :created, location: @profile }
       else
         format.html { render :new }
@@ -75,4 +83,16 @@ class ProfilesController < ApplicationController
     def profile_params
       params.require(:profile).permit(:name, :description, :image)
     end
+
+    def review_owner
+      unless current_user.id == @profile.user_id
+        flash[:notice] = 'Error'
+        redirect_to trail_name_path(@trails)
+      end
+    end
+
+    def get_profile
+   @profile = current_user.profile
+end
+
 end

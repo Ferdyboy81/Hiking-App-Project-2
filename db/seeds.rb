@@ -82,8 +82,7 @@ trails = Trail.create([
     location: "Los Angeles, CA",
     level: "moderate",
     distance: "7.2 miles",
-    directions: "http://google.com"}
-
+  }
 
 ])
 

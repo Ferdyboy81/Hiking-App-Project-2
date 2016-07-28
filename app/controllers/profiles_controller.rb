@@ -3,6 +3,7 @@ class ProfilesController < ApplicationController
 before_action :authenticate_user!
 before_action :get_profile, only: [:edit, :update]
 before_action :set_profile, only: [ :edit, :update, :destroy]
+before_action :review_owner, only: [:destroy, :edit, :update]
 
 
   # GET /profiles
@@ -10,12 +11,12 @@ before_action :set_profile, only: [ :edit, :update, :destroy]
   def index
     @profiles = Profile.where(user_id: current_user.id)
     @trails = Trail.all
-    @user = User.where(id: current_user.id)
   end
 
   # GET /profiles/1
   # GET /profiles/1.json
   def show
+  
 
   end
 

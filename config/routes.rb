@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get 'welcome/:id' => 'welcome#show', as: "trail_name"
 
  get 'profiles/' => 'profiles#index'
- get 'profiles/new' => 'profiles#new'
+ get 'profiles/new' => 'profiles#new', as: 'new'
  post '/profiles' => 'profiles#create'
  get '/profiles/:id' => 'profiles#show', as: 'show'
  get '/profiles/:id/edit' => 'profiles#edit', as: 'edit'

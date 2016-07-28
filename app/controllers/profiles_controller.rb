@@ -8,8 +8,9 @@ before_action :set_profile, only: [ :edit, :update, :destroy]
   # GET /profiles
   # GET /profiles.json
   def index
-    @profiles = Profile.all
+    @profiles = Profile.where(user_id: current_user.id)
     @trails = Trail.all
+    @user = User.where(id: current_user.id)
   end
 
   # GET /profiles/1
@@ -32,10 +33,8 @@ before_action :set_profile, only: [ :edit, :update, :destroy]
   # POST /profiles.json
   def create
     @profile = Profile.new(profile_params)
-    @profile.user = current_user
-
-
-
+    @profile.user_id = current_user.id
+    @profile.save
 
     respond_to do |format|
       if @profile.save

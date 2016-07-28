@@ -23,7 +23,7 @@
     <% @profiles.each do |profile| %>
     <div id="instagramstuffs">
         <%= image_tag profile.image_url(:thumb) %><br>
-        <%= link_to 'Full Size', show_path(profile) %> |
+        <%= link_to 'Info', show_path(profile) %> |
         <%= link_to 'Delete', destroy_path(profile), method: :delete, data: { confirm: 'Are you sure?' } %><br>
   </div>
     <% end %>

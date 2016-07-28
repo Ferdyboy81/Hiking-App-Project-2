@@ -2,5 +2,5 @@
 
 <%= form_for ([@trails, @trails.reviews.build]) do |f| %>
   <%= f.text_field :text %>
-  <%= f.submit %>
+  <%= f.submit 'Submit', :class => 'btn btn-default' %>
 <% end %>

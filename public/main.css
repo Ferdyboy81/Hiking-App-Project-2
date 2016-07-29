@@ -33,9 +33,6 @@ input {
   width: 250px;
 }
 
-#trails {
-  background-color: white;
-}
 
 #show {
   background-color: white;
@@ -79,4 +76,14 @@ a {
   padding: 20px;
   margin-left: 60px;
   margin-right: auto;
+}
+
+#trails {
+  display: block;
+}
+#googlemaps {
+  float: left;
+  display: inline-block;
+  width: 400px;
+  height: 400px;
 }

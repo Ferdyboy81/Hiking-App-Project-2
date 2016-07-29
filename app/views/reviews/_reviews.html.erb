@@ -1,7 +1,9 @@
 
 
 <% @reviews.each do |review| %>
-  <p><%= review.text %></p>
+
+  <p class="review"><%= review.text %></p>
+
   <p><%= review.user.username %> </p>
   <%= link_to "Delete comment",[review.trail, review], method: :delete %>
 <% end %>

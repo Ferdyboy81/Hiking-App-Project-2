@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post '/rate' => 'rater#create', :as => 'rate'
   root to: 'welcome#index'
   get '/welcome' => 'welcome#index'
 

@@ -9,6 +9,6 @@ class User < ActiveRecord::Base
   has_many :photos
   has_many :trails, through: :reviews
   has_many :profiles
-
+  ratyrate_rater
 
 end

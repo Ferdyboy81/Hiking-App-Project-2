@@ -16,27 +16,29 @@
 
 <div id="trails">
 <h1><%= @trails.name %></h1>
+Average Rating: <%= rating_for @trails, 'rating' %>
 <h6><%= @trails.location %> | Level: <%= @trails.level %> | <%= @trails.distance %></h6>
 
 
 </div>
-
 <%= render 'reviews/form' %>
 <%= render 'reviews/reviews' %>
-<!DOCTYPE html>
-<html>
-  <head>
+
+
+
     <style>
       #map {
         width: 100%;
         height: 400px;
       }
     </style>
-  </head>
-  <body>
+
+
     <h3>Directions</h3>
     <div id="map"></div>
-    <script>
+
+
+  <script>
     function initMap() {
 var myLatLng = {lat: <%= @trails.lat %>, lng: <%=@trails.lng %>};
 
@@ -55,5 +57,3 @@ var marker = new google.maps.Marker({
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnA6Vq2_4VZQH_M8zAjK9QoYNyvcO8ri8&callback=initMap">
     </script>
-  </body>
-</html>

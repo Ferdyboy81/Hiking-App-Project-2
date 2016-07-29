@@ -91,18 +91,25 @@ a {
 
 .titlepage {
   width: 100%;
-  height: 567px;
+  height: 60%;
 }
 
+.context {
+  width: 100%;
+  height: 40%;
+}
 .titletext {
   z-index: 1;
   color: white;
   font-size: 150px;
-  top: 200px;
+  top: 20%;
   position: absolute;
   left: 0;
   right: 0;
   margin: 0 auto;
   font-family: 'Pacifico', cursive;
+}
 
+.row {
+  padding-left: 80px
 }

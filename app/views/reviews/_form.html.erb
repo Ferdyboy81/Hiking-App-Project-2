@@ -2,6 +2,6 @@
 
 <%= form_for ([@trails, @trails.reviews.build]) do |f| %>
   <%= f.text_field :text %><br>
-<%= rating_for @trails, 'rating', enable_after_rate: false %>
+   Your rating:<%= rating_for @trails, 'rating',  disable_after_rate: false  %>
   <%= f.submit 'Submit', :class => 'btn btn-default' %>
 <% end %>

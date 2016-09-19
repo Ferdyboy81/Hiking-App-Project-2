@@ -17,3 +17,14 @@ Ascend LA is a hiking app that was made to help hiking enthusiast search trails 
 | CSS 3 	      |      			  |    	   	   |
 | Carrierwave   |             |            |
 
+##User Model
+
+| Parameters  | Value   	  | Description  | Example |
+| ----------- | ------------| ------------ | ------- |
+| Email   	  | String 		  | user email   | "knishime@gmail.com" |
+| Password 		| String  	  | user password| "password123" |
+| Encrypted Pw| String      | jwt encrypted password | fadk12394b3eo|
+| Firstname	  | String    	| users first name|"Kayli" |
+| Lasname		  | String     	| users last name | "Nishime" |
+| Username 	  | String    	| username used for login | kaynishime|
+| Createdat	  | Datetime    | Date the profile was created| 2016-08-14T22:48:15.387Z |

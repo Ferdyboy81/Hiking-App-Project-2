@@ -1,5 +1,5 @@
 <img src="http://i.imgur.com/HRj9oRq.png">
-
+Website: https://dry-sands-30553.herokuapp.com/
 # Ascend LA 
 Ascend LA is a hiking app that was made to help hiking enthusiast search trails to hike and review. This is catered towards the LA hiking community. Users can search for trails in LA, get directions through Google Geolocation API, comment and rate trails, and also post photos of their experience.
 

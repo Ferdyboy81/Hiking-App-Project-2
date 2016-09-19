@@ -4,6 +4,7 @@
 Ascend LA is a hiking app that was made to help hiking enthusiast search trails to hike and review. This is catered towards the LA hiking community. Users can search for trails in LA, get directions through Google Geolocation API, comment and rate trails, and also post photos of their experience.
 
 ##Technologies
+<img src="http://i.imgur.com/W3FjXxc.jpg">
 
 
 | Technologies  | APIs   	    | Deployment |

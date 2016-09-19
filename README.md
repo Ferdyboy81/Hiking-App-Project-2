@@ -50,3 +50,14 @@ Ascend LA is a hiking app that was made to help hiking enthusiast search trails 
 | Trail_id    | Integer   	| Id of trail being reviewd   |1 |
 | User_id     | Integer   	| Id of user reviewing the trail| 5 |
 
+##Profile Model
+
+| Parameters  | Value   	  | Description           | Example |
+| ----------- | ------------| ----------------------| ------- |
+| Created_at 	| Datetime   	| Date the review was created | 2016-08-14T22:48:15.387Z|
+| Updated_at	| Datetime 	  | Date the rview was updated  | 2016-04-02T22:28:12.387Z |
+| Name        | String      | Name of Image               | "Runyon Canyon Trail|
+| Description | String    	| Caption inputed by User     | "View from the top of the hike" |
+| Image       | String      | Url string of image         |  http://i.imgur.com/HRj9oRq.png |
+| User_id     | Integer   	| Id of user reviewing the trail| 5 |
+
